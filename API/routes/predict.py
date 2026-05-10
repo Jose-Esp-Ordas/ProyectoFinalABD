@@ -44,7 +44,7 @@ async def predict(features: TumorFeatures):
     
     try:
         # Convertir características a DataFrame
-        features_dict = features.dict()
+        features_dict = features.model_dump()
         df_features = pd.DataFrame([features_dict])
         
         # Escalar características

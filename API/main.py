@@ -5,13 +5,16 @@ Jose Espinoza y Jorge Bello
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
-from routes.predict import router, load_model_and_scaler
+from routes.predict import router, load_model_and_scaler 
+
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     load_model_and_scaler()
     print("✓ API lista")
+    yield
+    print("✓ API detenida")
 
 # Crear aplicación FastAPI
 app = FastAPI(

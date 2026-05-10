@@ -8,38 +8,7 @@ Sistema completo de clasificación de tumores de mama (malignos/benignos) implem
 - **Etapa II**: Desarrollo y comparación de modelos ML
 - **Etapa III**: API REST con FastAPI
 
-## 📁 Estructura del Proyecto
-
-```
-ProyectoABD/
-├── data/
-│   └── breast-cancer.csv          # Dataset original
-├── notebooks/
-│   ├── breast_cancer_clasificacion.ipynb # Noitebook para la creación del modelo
-│   └── 02_modelos_clasificacion.ipynb
-├── API/
-│   ├── __init__.py
-│   ├── config.py                  # Configuración global
-│   ├── main.py                    # Aplicación FastAPI
-│   ├── data/
-│   │   ├── __init__.py
-│   │   └── preprocessing.py       # Funciones de preprocesamiento
-│   ├── models/
-│   │   ├── __init__.py
-│   │   └── training.py            # Entrenamiento de modelos
-│   ├── routes/
-│   │   ├── __init__.py
-│   │   └── predict.py             # Endpoints de predicción
-│   └── schemas/
-│       ├── __init__.py
-│       └── prediction.py          # Esquemas Pydantic
-├── modelos/
-│   ├──
-├── requirements.txt
-└── README.md
-```
-
-## 🚀 Instalación
+## Iniciación
 
 ### 1. Clonar el repositorio
 
@@ -72,7 +41,7 @@ jupyter notebook notebooks/01_analisis_preprocesamiento.ipynb
 ### Iniciar servidor API
 
 ```bash
-python -m uvicorn src.main:app --reload --host 0.0.0.0 --port 8000
+python -m uvicorn src.main:app --reload
 ```
 
 ### Acceder a documentación
